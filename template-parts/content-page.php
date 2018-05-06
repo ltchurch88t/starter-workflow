@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="container">
-		<?php the_title( '<h1 class="h1">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="text-secondary">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php starter_post_thumbnail(); ?>

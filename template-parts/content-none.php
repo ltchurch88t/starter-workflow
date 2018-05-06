@@ -11,7 +11,7 @@
 
 <section class="container">
 	<header class="row">
-		<h1 class="h3"><?php esc_html_e( 'Nothing Found', 'starter' ); ?></h1>
+		<h1 class="text-danger"><?php esc_html_e( 'Nothing Found', 'starter' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="container">

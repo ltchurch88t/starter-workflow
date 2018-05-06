@@ -21,10 +21,25 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="container">
 
-	<header id="masthead" class="jumbotron jumbotron-fluid">
-		<div class="container">
+	<header id="masthead" class="fluid-container">
+
+		<nav id="site-navigation" class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<span class="navbar-brand"><?php bloginfo( 'name' );?></span>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+	          			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	       	 		</li>
+	        		<li class="nav-item">
+	          			<a class="nav-link" href="#">Link</a>
+	        		</li>
+	        	</ul>
+	        </div>
+			
+		</nav><!-- #site-navigation -->
+
+		<div class="jumbotron">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -43,15 +58,6 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="nav">
-			<button class="btn btn-primary"><?php esc_html_e( 'Primary Menu', 'starter' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="container">

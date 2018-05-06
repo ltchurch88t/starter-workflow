@@ -24,7 +24,7 @@ get_header();
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
-					<h1 class="h1"><?php single_post_title(); ?></h1>
+					<h1 class="text-info"><?php single_post_title(); ?></h1>
 				</header>
 				<?php
 			endif;
@@ -55,5 +55,8 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
+// Default sidebar is set to off as it looks much cleaner on layout. Simply uncomment to activate
+// get_sidebar();
+
 get_footer();

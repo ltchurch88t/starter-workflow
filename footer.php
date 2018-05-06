@@ -13,15 +13,14 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="container">
+	<footer id="colophon" class="fluid-container text-light bg-dark">
 		<div id="site-info" class="row justify-content-center h6">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s | Created by %2$s.', 'starter' ), 'Starter', '<a href="https://nakdesignstudio.io/">NAK Design Studio</a>' );
+				printf( esc_html__( 'Theme: %1$s | Created by %2$s.', 'starter' ), 'Starter', '<a href="https://nakdesignstudio.io/">&nbsp;NAK Design Studio</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

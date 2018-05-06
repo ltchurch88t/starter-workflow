@@ -33,5 +33,9 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
+
+// Default sidebar is set to off as it looks much cleaner on layout. Simply uncomment to activate
+// get_sidebar();
+
 get_footer();

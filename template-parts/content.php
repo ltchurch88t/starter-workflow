@@ -13,9 +13,9 @@
 	<header class="container">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="h1">', '</h1>' );
+			the_title( '<h1 class="text-secondary">', '</h1>' );
 		else :
-			the_title( '<h2 class="h2"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h1><a class="text-secondary" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
