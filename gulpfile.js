@@ -1,8 +1,7 @@
-const livereload = require('gulp-livereload');
+const connect = require('gulp-connect'); //using gulp-connect since livereload is not working properly
 const gulp = require('gulp');
 const sass = require('gulp-ruby-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync').create();
 
 
 gulp.task('sass', () =>
@@ -13,19 +12,22 @@ gulp.task('sass', () =>
 			cascade: false
 		}))
 		.pipe(gulp.dest(''))
-		.pipe(browserSync.stream())
+		.pipe(connect.reload()) //adding reload functionality to sass files
 );
 
 // Watch
 gulp.task('watch', function() {
 
-  // Watch .scss files
-  gulp.watch('styles/**/*.sass', ['sass']);
+  // Watch .sass files
+  gulp.watch('styles/**/*.sass', ['sass'])
 
-  gulp.watch('*.php', livereload.reload)
+  gulp.watch('*.php', connect.reload) //using connect server instead of livereload
 
   // Create LiveReload server
-  livereload.listen();
+  connect.server({
+  	livereload: true, //setting default to true
+  	port: 8888 //matching port for MAMP
+  });
 
 });
 
